@@ -11,22 +11,27 @@ public class Enemy : MonoBehaviour {
     void Start ()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        playerPosistion = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        playerPosistion = player.GetComponent<Transform>();
     }
 	
 	void Update ()
 	{
+		//Moves towards the player at the given speed
 	    transform.position = Vector2.MoveTowards(transform.position, playerPosistion.position, runSpeed * Time.deltaTime);
 	}
 
+	//If the enemy colides with anything
     void OnTriggerEnter2D(Collider2D other)
     {
+		//If the enemy collides with the player
         if (other.CompareTag("Player"))
         {
             player.HitPoints -= 10;
             Destroy(gameObject);
         }
-        if (other.CompareTag("Projectile"))
+
+		//If the enemy colides with a projectile
+        else if (other.CompareTag("Projectile"))
         {
             Destroy(other.gameObject);
             Destroy(gameObject);

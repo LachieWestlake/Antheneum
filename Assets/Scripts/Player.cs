@@ -23,7 +23,11 @@ public class Player : MonoBehaviour {
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
+
+		//Draw player health on screen
         HealthText.text = "Health: " + HitPoints;
+
+		//If the player dies reload the current scene
         if (HitPoints == 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -32,11 +36,11 @@ public class Player : MonoBehaviour {
 
     void FixedUpdate()
     {
-        if (horizontal != 0 && vertical != 0)
+        if (horizontal != 0 && vertical != 0) //If moving diagonally
         {
             body.velocity = new Vector2((horizontal * runSpeed) * moveLimiter, (vertical * runSpeed) * moveLimiter);
         }
-        else
+        else //If not moving diagonally
         {
             body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
         }

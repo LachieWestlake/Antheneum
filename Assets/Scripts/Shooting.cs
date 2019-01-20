@@ -15,10 +15,13 @@ public class Shooting : MonoBehaviour
 	}
 	
 	void Update () {
+		//If the time between shots has passed and the left mouse button is clicked
 	    if (Time.time >= timestamp && Input.GetMouseButton(0))
 	    {
+			//Create a new projectile at the players current position
             Instantiate(magic, playerPosistion.position, Quaternion.identity);
-	        timestamp = Time.time + timeBetweenShots;
+			//Creates a time stamp for when th enext projectile can be fired
+			timestamp = Time.time + timeBetweenShots;
         }
 	}
 }

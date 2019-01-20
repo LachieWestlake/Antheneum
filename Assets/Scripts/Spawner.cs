@@ -7,28 +7,34 @@ public class Spawner : MonoBehaviour
 {
     public GameObject enemy;
     public Transform[] spawnPoints;
-    private float timeBtwSpawns;
+    private float currentTimeBtwSpawns;
     public float startTimeBtwSpawn;
     public Text enemyAmount;
-    private GameObject[] enemyAmountArray;
+    private GameObject[] arrayOfEnemies;
 
     void Start ()
 	{
-	    timeBtwSpawns = startTimeBtwSpawn;
+	    currentTimeBtwSpawns = startTimeBtwSpawn;
 	}
 	
 	void Update () {
-	    if (timeBtwSpawns <= 0)
+		//If it is time to spawn a new enemy
+	    if (currentTimeBtwSpawns <= 0)
 	    {
+			//Chooses a random spawn point for the enemy
 	        int randPos = Random.Range(0, spawnPoints.Length);
+			//Creates a new enemy at the chosen pooint
 	        Instantiate(enemy, spawnPoints[randPos].position, Quaternion.identity);
-	        timeBtwSpawns = startTimeBtwSpawn;
+	        currentTimeBtwSpawns = startTimeBtwSpawn;
 	    }
 	    else
 	    {
-	        timeBtwSpawns -= Time.deltaTime;
+	        currentTimeBtwSpawns -= Time.deltaTime;
 	    }
-	    enemyAmountArray = GameObject.FindGameObjectsWithTag("Enemy");
-	    enemyAmount.text = "Enemies: " + enemyAmountArray.Length;
+		
+		//an array of all enemies that currently exist
+	    arrayOfEnemies = GameObject.FindGameObjectsWithTag("Enemy");
+		//Writes the amount of enemies to the screen
+	    enemyAmount.text = "Enemies: " + arrayOfEnemies.Length;
 	}
 }

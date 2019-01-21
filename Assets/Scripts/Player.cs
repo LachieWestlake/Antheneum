@@ -34,15 +34,16 @@ public class Player : MonoBehaviour {
         }
     }
 
-    void FixedUpdate()
+	void FixedUpdate()
     {
-        if (horizontal != 0 && vertical != 0) //If moving diagonally
-        {
-            body.velocity = new Vector2((horizontal * runSpeed) * moveLimiter, (vertical * runSpeed) * moveLimiter);
-        }
-        else //If not moving diagonally
-        {
-            body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
-        }
+		if (horizontal != 0 && vertical != 0) //If moving diagonally
+		{
+			body.velocity = new Vector2((horizontal * runSpeed) * moveLimiter, (vertical * runSpeed) * moveLimiter);
+		}
+		else //If not moving diagonally
+		{
+			body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+		}
     }
+
 }

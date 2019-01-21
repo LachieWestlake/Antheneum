@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour {
 	    transform.position = Vector2.MoveTowards(transform.position, playerPosistion.position, runSpeed * Time.deltaTime);
 	}
 
-	//If the enemy colides with anything
+	//If the enemy colides with the player or a projectile
     void OnTriggerEnter2D(Collider2D other)
     {
 		//If the enemy collides with the player

@@ -20,7 +20,7 @@ public class Shooting : MonoBehaviour
 	    {
 			//Create a new projectile at the players current position
             Instantiate(magic, playerPosistion.position, Quaternion.identity);
-			//Creates a time stamp for when th enext projectile can be fired
+			//Creates a time stamp for when the next projectile can be fired
 			timestamp = Time.time + timeBetweenShots;
         }
 	}

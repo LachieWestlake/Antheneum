@@ -114,7 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runSpeed: 5
   timeBetweenHits: 0.5
-  meleeRange: 5
+  meleeRange: 2
 --- !u!212 &212472320585368694
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -44,7 +44,7 @@ public class Enemy : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D other)
     {
 		//If the enemy colides with a projectile
-        if (other.CompareTag("Projectile"))
+        if (other.CompareTag("Player Projectile"))
         {
             Destroy(other.gameObject);
             Destroy(gameObject);

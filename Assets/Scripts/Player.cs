@@ -46,4 +46,14 @@ public class Player : MonoBehaviour {
 		}
     }
 
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		//If the playre colides with a projectile that is not it's own
+		if (other.CompareTag("Projectile"))
+		{
+			Destroy(other.gameObject);
+			HitPoints -= 10;
+		}
+	}
+
 }

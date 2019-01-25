@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMelee : Enemy {
+public class MeleeEnemy : Enemy {
 
 	public float timeBetweenHits = 0.5f;  // Allow 2 shots per second
 	public float meleeRange = 1.5f;
@@ -12,9 +12,6 @@ public class EnemyMelee : Enemy {
 	void Update () {
 
 		Move();
-
-		if (Vector2.Distance(PlayerPosistion.position, transform.position) < meleeRange)
-			Debug.Log("REEEEEEE  " + Vector2.Distance(PlayerPosistion.position, transform.position) + "    " + meleeRange);
 
 		if (Time.time >= timestamp && Vector2.Distance(PlayerPosistion.position, transform.position) < meleeRange)
 		{

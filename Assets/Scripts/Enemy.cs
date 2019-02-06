@@ -7,6 +7,8 @@ public class Enemy : MonoBehaviour {
     public float runSpeed;
     private Transform playerPosistion;
     private Player player;
+	private Rigidbody2D rb;
+	public float enemyDrag = 0.01f;
 
 	public Transform PlayerPosistion
 	{
@@ -32,6 +34,8 @@ public class Enemy : MonoBehaviour {
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         playerPosistion = player.GetComponent<Transform>();
+		rb = GetComponent<Rigidbody2D>();
+		rb.drag = enemyDrag;
     }
 	
 	public void Move ()

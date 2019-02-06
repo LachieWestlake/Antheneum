@@ -336,6 +336,12 @@ Prefab:
       propertyPath: HealthText
       value: 
       objectReference: {fileID: 1209441057}
+    - target: {fileID: 114415891073054924, guid: bd10e7159d14ecd45ae6209a1ae2d574,
+        type: 2}
+      propertyPath: magic
+      value: 
+      objectReference: {fileID: 1035821541700378, guid: a25dd43de0a08c6428f8289c4efadbcf,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd10e7159d14ecd45ae6209a1ae2d574, type: 2}
   m_IsPrefabAsset: 0
@@ -443,7 +449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cae3efca639b85d4bae8469c30ed569a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 1113731345520778, guid: 0f3948450cf77c64b9e576498fa11491, type: 2}
+  enemy: {fileID: 1907688306630536, guid: 32a2fbaaa8ec4e14c8acc9cf70fb281d, type: 2}
   spawnPoints:
   - {fileID: 745806894}
   - {fileID: 192825899}

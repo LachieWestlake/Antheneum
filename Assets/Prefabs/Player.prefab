@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114670893364964278}
   - component: {fileID: 114415891073054924}
   - component: {fileID: 61194247534447012}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 4426343480705678}
   - component: {fileID: 20321681154536128}
   - component: {fileID: 81516513283401354}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -179,6 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magic: {fileID: 1014715670708990, guid: e530ed586f4c4294488a978a0e76d1f2, type: 2}
+  projectileVelocity: 10
   timeBetweenShots: 0.1111
 --- !u!114 &114670893364964278
 MonoBehaviour:

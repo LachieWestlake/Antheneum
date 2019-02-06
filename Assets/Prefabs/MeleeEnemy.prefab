@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 61800352803621496}
   - component: {fileID: 114323858613383882}
   - component: {fileID: 50938729707896716}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MeleeEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1907688306630536}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.57, y: 1.59, z: 0}
+  m_LocalPosition: {x: 4.8745947, y: 2.308731, z: 0}
   m_LocalScale: {x: 1, y: 0.91370994, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -100,8 +100,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 5
+  enemyDrag: 30
+  speed: 3
   timeBetweenHits: 0.5
-  meleeRange: 1.5
+  meleeRange: 2
 --- !u!212 &212472320585368694
 SpriteRenderer:
   m_ObjectHideFlags: 1

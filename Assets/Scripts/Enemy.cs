@@ -8,30 +8,43 @@ public class Enemy : MonoBehaviour {
     private Transform playerPosistion;
     private Player player;
 
-    void Start ()
+	public Transform PlayerPosistion
+	{
+		get
+		{
+			return playerPosistion;
+		}
+	}
+
+	public Player Player
+	{
+		get
+		{
+			return player;
+		}
+		set
+		{
+			player = value;
+		}
+	}
+
+	public void Start ()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         playerPosistion = player.GetComponent<Transform>();
     }
 	
-	void Update ()
+	public void Move ()
 	{
 		//Moves towards the player at the given speed
 	    transform.position = Vector2.MoveTowards(transform.position, playerPosistion.position, runSpeed * Time.deltaTime);
 	}
 
-	//If the enemy colides with anything
+	//If the enemy colides with a projectile
     void OnTriggerEnter2D(Collider2D other)
     {
-		//If the enemy collides with the player
-        if (other.CompareTag("Player"))
-        {
-            player.HitPoints -= 10;
-            Destroy(gameObject);
-        }
-
 		//If the enemy colides with a projectile
-        else if (other.CompareTag("Projectile"))
+        if (other.CompareTag("Player Projectile"))
         {
             Destroy(other.gameObject);
             Destroy(gameObject);

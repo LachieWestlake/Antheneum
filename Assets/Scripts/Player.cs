@@ -34,15 +34,26 @@ public class Player : MonoBehaviour {
         }
     }
 
-    void FixedUpdate()
+	void FixedUpdate()
     {
-        if (horizontal != 0 && vertical != 0) //If moving diagonally
-        {
-            body.velocity = new Vector2((horizontal * runSpeed) * moveLimiter, (vertical * runSpeed) * moveLimiter);
-        }
-        else //If not moving diagonally
-        {
-            body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
-        }
+		if (horizontal != 0 && vertical != 0) //If moving diagonally
+		{
+			body.velocity = new Vector2((horizontal * runSpeed) * moveLimiter, (vertical * runSpeed) * moveLimiter);
+		}
+		else //If not moving diagonally
+		{
+			body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+		}
     }
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		//If the playre colides with a projectile that is not it's own
+		if (other.CompareTag("Projectile"))
+		{
+			Destroy(other.gameObject);
+			HitPoints -= 10;
+		}
+	}
+
 }

@@ -20,4 +20,9 @@ public class HealthBar : MonoBehaviour {
 	{
 		bar.localScale = new Vector3(sizeNormalised, 1f);
 	}
+
+	public void SetColour(Color color)
+	{
+		bar.Find("BarSprite").GetComponent<SpriteRenderer>().color = color;
+	}
 }

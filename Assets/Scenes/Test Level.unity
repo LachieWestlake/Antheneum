@@ -880,6 +880,16 @@ Prefab:
       propertyPath: HealthText
       value: 
       objectReference: {fileID: 530086724}
+    - target: {fileID: 114828909146394720, guid: bd10e7159d14ecd45ae6209a1ae2d574,
+        type: 2}
+      propertyPath: m_RefResolutionX
+      value: 480
+      objectReference: {fileID: 0}
+    - target: {fileID: 114828909146394720, guid: bd10e7159d14ecd45ae6209a1ae2d574,
+        type: 2}
+      propertyPath: m_RefResolutionY
+      value: 270
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd10e7159d14ecd45ae6209a1ae2d574, type: 2}
   m_IsPrefabAsset: 0

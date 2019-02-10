@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 4426343480705678}
   - component: {fileID: 20321681154536128}
   - component: {fileID: 81516513283401354}
+  - component: {fileID: 114828909146394720}
   m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -99,7 +100,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6.9567766
+  orthographic size: 9.08
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -151,14 +152,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.08, y: 0.16}
+    oldSize: {x: 0.5, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.09, y: 0.18}
+  m_Size: {x: 0.5, y: 1}
   m_EdgeRadius: 0
 --- !u!81 &81516513283401354
 AudioListener:
@@ -195,6 +196,25 @@ MonoBehaviour:
   runSpeed: 15
   HitPoints: 100
   HealthText: {fileID: 0}
+--- !u!114 &114828909146394720
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1403087788872152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AssetsPPU: 16
+  m_RefResolutionX: 480
+  m_RefResolutionY: 270
+  m_UpscaleRT: 1
+  m_PixelSnapping: 0
+  m_CropFrameX: 1
+  m_CropFrameY: 1
+  m_StretchFill: 1
 --- !u!212 &212248607682351122
 SpriteRenderer:
   m_ObjectHideFlags: 1

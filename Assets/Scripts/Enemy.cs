@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour {
     private Player player;
 	private Rigidbody2D rb;
 	public float enemyDrag = 0.01f;
+	public int hitPoints = 20;
 
 	public Transform PlayerPosistion
 	{
@@ -51,7 +52,9 @@ public class Enemy : MonoBehaviour {
         if (other.CompareTag("Player Projectile"))
         {
             Destroy(other.gameObject);
-            Destroy(gameObject);
+			hitPoints -= 10;
+			if (hitPoints <= 0)
+				Destroy(gameObject);
         }
     }
 }

@@ -55,8 +55,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1332103429601304}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.15, y: -0.89, z: 0}
-  m_LocalScale: {x: 1.641, y: 1.519, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 22, y: 22, z: 1}
   m_Children:
   - {fileID: 4426343480705678}
   m_Father: {fileID: 0}
@@ -151,14 +151,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.08, y: 0.16}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.11, y: 1.11}
+  m_Size: {x: 0.09, y: 0.18}
   m_EdgeRadius: 0
 --- !u!81 &81516513283401354
 AudioListener:
@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50bb6cfc27e6caa41934fda616bee743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  magic: {fileID: 1014715670708990, guid: e530ed586f4c4294488a978a0e76d1f2, type: 2}
+  magic: {fileID: 1035821541700378, guid: a25dd43de0a08c6428f8289c4efadbcf, type: 2}
   projectileVelocity: 10
   timeBetweenShots: 0.1111
 --- !u!114 &114670893364964278
@@ -230,7 +230,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: eedde243e1a737647b6bed84c76ef2c7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 52b3e556c6f03034b8a9de0353b7046a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

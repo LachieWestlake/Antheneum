@@ -60,7 +60,8 @@ public class Enemy : MonoBehaviour {
         if (other.CompareTag("Player Projectile"))
         {
             Destroy(other.gameObject);
-			hitPoints -= 10;
+            Projectile playerShot = other.GetComponent<Projectile>();
+            hitPoints -= playerShot.Damage;
 			if (hitPoints <= 0)
 				Destroy(gameObject);
 

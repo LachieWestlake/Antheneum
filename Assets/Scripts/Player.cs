@@ -13,6 +13,8 @@ public class Player : MonoBehaviour {
     public float runSpeed = 20;
     public int HitPoints = 100;
     public Text HealthText;
+    public int ManaPoints = 100;
+    public Text ManaText;
 
     void Start()
     {
@@ -26,8 +28,9 @@ public class Player : MonoBehaviour {
 
 		//Draw player health on screen
         HealthText.text = "Health: " + HitPoints;
+        ManaText.text = "Mana: " + ManaPoints;
 
-		//If the player dies reload the current scene
+        //If the player dies reload the current scene
         if (HitPoints == 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

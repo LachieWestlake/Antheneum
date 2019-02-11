@@ -617,6 +617,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 530086723}
+  - {fileID: 1716657106}
   - {fileID: 1220512651}
   m_Father: {fileID: 0}
   m_RootOrder: 10
@@ -654,7 +655,7 @@ RectTransform:
   m_LocalScale: {x: 0.99998903, y: 0.99998903, z: 0.99998903}
   m_Children: []
   m_Father: {fileID: 1111885068}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -885,39 +886,91 @@ Prefab:
       propertyPath: HealthText
       value: 
       objectReference: {fileID: 530086724}
-    - target: {fileID: 114828909146394720, guid: bd10e7159d14ecd45ae6209a1ae2d574,
+    - target: {fileID: 114670893364964278, guid: bd10e7159d14ecd45ae6209a1ae2d574,
         type: 2}
-      propertyPath: m_RefResolutionX
-      value: 480
-      objectReference: {fileID: 0}
-    - target: {fileID: 114828909146394720, guid: bd10e7159d14ecd45ae6209a1ae2d574,
-        type: 2}
-      propertyPath: m_RefResolutionY
-      value: 270
-      objectReference: {fileID: 0}
-    - target: {fileID: 114828909146394720, guid: bd10e7159d14ecd45ae6209a1ae2d574,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 20321681154536128, guid: bd10e7159d14ecd45ae6209a1ae2d574,
-        type: 2}
-      propertyPath: m_BackGroundColor.r
-      value: 0.25490198
-      objectReference: {fileID: 0}
-    - target: {fileID: 20321681154536128, guid: bd10e7159d14ecd45ae6209a1ae2d574,
-        type: 2}
-      propertyPath: m_BackGroundColor.g
-      value: 0.5372549
-      objectReference: {fileID: 0}
-    - target: {fileID: 20321681154536128, guid: bd10e7159d14ecd45ae6209a1ae2d574,
-        type: 2}
-      propertyPath: m_BackGroundColor.b
-      value: 0.42352945
-      objectReference: {fileID: 0}
+      propertyPath: ManaText
+      value: 
+      objectReference: {fileID: 1716657107}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd10e7159d14ecd45ae6209a1ae2d574, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1716657105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1716657106}
+  - component: {fileID: 1716657108}
+  - component: {fileID: 1716657107}
+  m_Layer: 5
+  m_Name: Mana Label
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1716657106
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1716657105}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999195, y: 0.99999195, z: 0.99999195}
+  m_Children: []
+  m_Father: {fileID: 1111885068}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 210, y: -333}
+  m_SizeDelta: {x: 335.40002, y: 175.30005}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1716657107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1716657105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 60
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 180
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Health: 100
+
+'
+--- !u!222 &1716657108
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1716657105}
+  m_CullTransparentMesh: 0
 --- !u!1 &2075003694
 GameObject:
   m_ObjectHideFlags: 0

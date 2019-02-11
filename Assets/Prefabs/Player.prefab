@@ -56,7 +56,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1332103429601304}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.493, y: -1.194, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4426343480705678}
@@ -85,7 +85,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.25490198, g: 0.5372549, b: 0.42352945, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -179,9 +179,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50bb6cfc27e6caa41934fda616bee743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  magic: {fileID: 1035821541700378, guid: a25dd43de0a08c6428f8289c4efadbcf, type: 2}
-  projectileVelocity: 10
+  manaCost: 0
+  shotSize: 0
+  shotSpeed: 0
+  shotDistance: 0
+  shotDamage: 0
   timeBetweenShots: 0.1111
+  magic: {fileID: 1035821541700378, guid: a25dd43de0a08c6428f8289c4efadbcf, type: 2}
+  playerPosistion: {fileID: 0}
+  timestamp: 0
 --- !u!114 &114670893364964278
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -196,13 +202,18 @@ MonoBehaviour:
   runSpeed: 15
   HitPoints: 100
   HealthText: {fileID: 0}
+  maxHitPoints: 100
+  ManaPoints: 100
+  ManaText: {fileID: 0}
+  maxManaPoints: 100
+  manaRegenPeriod: 1
 --- !u!114 &114828909146394720
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1403087788872152}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
   m_Name: 

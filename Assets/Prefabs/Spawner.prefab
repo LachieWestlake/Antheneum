@@ -116,7 +116,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1428777982633422}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.53, y: -1.94, z: 0}
+  m_LocalPosition: {x: 3.0018616, y: -1.1816626, z: 0}
   m_LocalScale: {x: 1, y: 0.91370994, z: 1}
   m_Children:
   - {fileID: 4741590391325972}
@@ -262,10 +262,9 @@ MonoBehaviour:
   healthBar: {fileID: 114480487486037258}
   runSpeed: 0
   enemyDrag: 0.01
-  hitPoints: 100
+  hitPoints: 200
   enemy: {fileID: 1907688306630536, guid: 32a2fbaaa8ec4e14c8acc9cf70fb281d, type: 2}
   startTimeBtwSpawn: 5
-  enemyAmount: {fileID: 0}
 --- !u!212 &212005762513405334
 SpriteRenderer:
   m_ObjectHideFlags: 1

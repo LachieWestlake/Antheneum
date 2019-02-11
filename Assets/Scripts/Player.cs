@@ -10,11 +10,19 @@ public class Player : MonoBehaviour {
     float horizontal;
     float vertical;
     float moveLimiter = 0.7f;
+
     public float runSpeed = 20;
+
     public int HitPoints = 100;
     public Text HealthText;
+    public int maxHitPoints = 100;
+
     public int ManaPoints = 100;
     public Text ManaText;
+    public int maxManaPoints = 100;
+
+    private float manaRegenTime = 1.0f;
+    public float manaRegenPeriod = 1.0f;
 
     void Start()
     {
@@ -34,6 +42,15 @@ public class Player : MonoBehaviour {
         if (HitPoints == 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        if (ManaPoints < maxManaPoints)
+        {
+            if (Time.time > manaRegenTime)
+            {
+                manaRegenTime += manaRegenPeriod;
+                ManaPoints += 1;
+            }
         }
     }
 

@@ -180,9 +180,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed49dc4b070e139478188b9288a5bea5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manaCost: 50
-  shotSize: 4
-  shotSpeed: 2
+  manaCost: 18
+  shotSize: 2
+  shotSpeed: 4
   shotDistance: 4
   shotDamage: 6
   timeBetweenShots: 0.1111

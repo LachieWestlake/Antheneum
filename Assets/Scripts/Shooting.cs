@@ -9,9 +9,8 @@ public class Shooting : MonoBehaviour
     public int shotDamage;
     public float timeBetweenShots = 0.1111f;  // Allow 3 shots per second
     public GameObject magic;
-
-    private Transform playerPosistion;
-    private float timestamp;
+    public Transform playerPosistion;
+    public float timestamp;
 
     void Start ()
 	{

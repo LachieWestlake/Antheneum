@@ -265,6 +265,7 @@ MonoBehaviour:
   hitPoints: 200
   enemy: {fileID: 1907688306630536, guid: 32a2fbaaa8ec4e14c8acc9cf70fb281d, type: 2}
   startTimeBtwSpawn: 5
+  maxEnemies: 2
 --- !u!212 &212005762513405334
 SpriteRenderer:
   m_ObjectHideFlags: 1

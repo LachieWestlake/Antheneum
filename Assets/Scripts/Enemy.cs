@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour {
 	public float enemyDrag = 0.01f;
 	public int hitPoints = 20;
 	private int maxHealth;
+	public int range;
 
 	public Transform PlayerPosistion
 	{
@@ -44,8 +45,11 @@ public class Enemy : MonoBehaviour {
 	
 	public void Move ()
 	{
-		//Moves towards the player at the given speed
-	    transform.position = Vector2.MoveTowards(transform.position, playerPosistion.position, runSpeed * Time.deltaTime);
+		if (Vector2.Distance(PlayerPosistion.position, transform.position) < range)
+		{
+			//Moves towards the player at the given speed
+			transform.position = Vector2.MoveTowards(transform.position, playerPosistion.position, runSpeed * Time.deltaTime);
+		}
 	}
 
 	public void UpdateHealth()

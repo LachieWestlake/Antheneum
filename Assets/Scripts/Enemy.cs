@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour {
 	public float enemyDrag = 0.01f;
 	public int hitPoints = 20;
 	private int maxHealth;
-	public int range;
+	public int movementRange;
 
 	public Transform PlayerPosistion
 	{
@@ -42,10 +42,39 @@ public class Enemy : MonoBehaviour {
 		rb.drag = enemyDrag;
 		maxHealth = hitPoints;
     }
-	
+
+	bool CanSeePlayer ()
+	{
+		Vector2 direction = (playerPosistion.position - transform.position).normalized;
+
+		RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, movementRange, 1 << 8 | 1 << 10);
+
+		Debug.DrawRay(transform.position, direction, Color.red, 3f);
+
+		if (hit.collider != null)
+			Debug.Log(hit.collider.name);
+		else
+			Debug.Log("Missed everything just like your goals in life");
+
+		if (hit.collider)
+			//If the raycast hits the player
+			if (hit.collider.tag == "Player")
+			{
+				Debug.Log("Success!!!");
+				return true;
+			}
+
+			return false;
+	}
+
+	private void FixedUpdate()
+	{
+		Move();
+	}
+
 	public void Move ()
 	{
-		if (Vector2.Distance(PlayerPosistion.position, transform.position) < range)
+		if ((Vector2.Distance(PlayerPosistion.position, transform.position) < movementRange) && CanSeePlayer())
 		{
 			//Moves towards the player at the given speed
 			transform.position = Vector2.MoveTowards(transform.position, playerPosistion.position, runSpeed * Time.deltaTime);

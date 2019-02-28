@@ -16,6 +16,7 @@ public class Spawner : Enemy
 		base.Start();
 	    currentTimeBtwSpawns = startTimeBtwSpawn;
 		enemiesSpawned = new List<GameObject>();
+		runSpeed = 0;
 	}
 	
 	void Update () {

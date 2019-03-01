@@ -45,22 +45,17 @@ public class Enemy : MonoBehaviour {
 
 	bool CanSeePlayer ()
 	{
+		//The direction of the player from the enemy
 		Vector2 direction = (playerPosistion.position - transform.position).normalized;
 
-		RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, movementRange, 1 << 8 | 1 << 10);
+		//Sends a raycast from the enemy towards the player that is the length of the maximum distance
+		RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, movementRange, 1 << LayerMask.NameToLayer("Player") | 1 << LayerMask.NameToLayer("Immovable Object"));
 
-		Debug.DrawRay(transform.position, direction, Color.red, 3f);
-
-		if (hit.collider != null)
-			Debug.Log(hit.collider.name);
-		else
-			Debug.Log("Missed everything just like your goals in life");
-
+		//If the raycast hits something
 		if (hit.collider)
 			//If the raycast hits the player
 			if (hit.collider.tag == "Player")
 			{
-				Debug.Log("Success!!!");
 				return true;
 			}
 
@@ -74,7 +69,7 @@ public class Enemy : MonoBehaviour {
 
 	public void Move ()
 	{
-		if ((Vector2.Distance(PlayerPosistion.position, transform.position) < movementRange) && CanSeePlayer())
+		if (CanSeePlayer())
 		{
 			//Moves towards the player at the given speed
 			transform.position = Vector2.MoveTowards(transform.position, playerPosistion.position, runSpeed * Time.deltaTime);

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212912399265536316}
   - component: {fileID: 50194161511111482}
   - component: {fileID: 61318479341283644}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wall
   m_TagString: Immovable Object
   m_Icon: {fileID: 0}

@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour {
 	public float enemyDrag = 0.01f;
 	public int hitPoints = 20;
 	private int maxHealth;
+	public int movementRange;
 
 	public Transform PlayerPosistion
 	{
@@ -41,11 +42,38 @@ public class Enemy : MonoBehaviour {
 		rb.drag = enemyDrag;
 		maxHealth = hitPoints;
     }
-	
+
+	bool CanSeePlayer ()
+	{
+		//The direction of the player from the enemy
+		Vector2 direction = (playerPosistion.position - transform.position).normalized;
+
+		//Sends a raycast from the enemy towards the player that is the length of the maximum distance
+		RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, movementRange, 1 << LayerMask.NameToLayer("Player") | 1 << LayerMask.NameToLayer("Immovable Object"));
+
+		//If the raycast hits something
+		if (hit.collider)
+			//If the raycast hits the player
+			if (hit.collider.tag == "Player")
+			{
+				return true;
+			}
+
+			return false;
+	}
+
+	private void FixedUpdate()
+	{
+		Move();
+	}
+
 	public void Move ()
 	{
-		//Moves towards the player at the given speed
-	    transform.position = Vector2.MoveTowards(transform.position, playerPosistion.position, runSpeed * Time.deltaTime);
+		if (CanSeePlayer())
+		{
+			//Moves towards the player at the given speed
+			transform.position = Vector2.MoveTowards(transform.position, playerPosistion.position, runSpeed * Time.deltaTime);
+		}
 	}
 
 	public void UpdateHealth()

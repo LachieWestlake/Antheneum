@@ -252,7 +252,8 @@ MonoBehaviour:
   runSpeed: 5
   enemyDrag: 30
   hitPoints: 20
-  speed: 3
+  movementRange: 10
+  speed: 2
   timeBetweenHits: 0.5
   meleeRange: 2
 --- !u!114 &114882303914494686
